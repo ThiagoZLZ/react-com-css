@@ -9,14 +9,23 @@ export const Descricao = styled(P)`
 export const BotaoTema = styled.button`
   border-radius: 12px;
   padding: 10px;
-  color: #eee;
+  color: ${(props) => props.theme.corDeFundo};
   font-size: 10px;
   font-weigth: bold;
-  background-color: #282a35;
+  background-color: ${(props) => props.theme.corPrincipal};
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 export const SideBarContainer = styled.div`
   position: sticky;
   top: 80px;
   left: 0;
+
+  @media (max-width: 768px) {
+    margin-botton: 40px;
+    text-align: center;
+  }
 `
